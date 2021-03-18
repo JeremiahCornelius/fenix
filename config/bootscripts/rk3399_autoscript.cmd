@@ -125,7 +125,7 @@ echo DTB: ${dtb_prefix}${boot_dtb}
 if test -e mmc ${devnum}:${boot_env_part} ${mark_prefix}.next; then
 	setenv condev "earlyprintk console=ttyS2,1500000n8 console=tty0"
 else
-	setenv condev "earlyprintk console=ttyFIQ0,1500000n8 console=tty0"
+	setenv condev "earlyprintk console=ttyFIQ0,1500000n8 splash quiet plymouth.ignore-serial-consoles vt.handoff=7"
 fi
 
 setenv boot_start booti ${kernel_addr_r} ${ramdisk_addr_r} ${fdt_addr_r}

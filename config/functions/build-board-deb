@@ -396,6 +396,6 @@ build_board_deb() {
 	mkdir -p $BUILD_DEBS/$VERSION/$KHADAS_BOARD/${DISTRIBUTION}-${DISTRIB_RELEASE}
 	cp ${pkgdir}.deb $BUILD_DEBS/$VERSION/$KHADAS_BOARD/${DISTRIBUTION}-${DISTRIB_RELEASE}
 	# Cleanup
-	rm -rf ${pkgdir}.deb
-	rm -rf $pkgdir
+	# rm -rf ${pkgdir}.deb  # Commented to keep the built files
+	# rm -rf $pkgdir  # Commented to keep the built files
 }
